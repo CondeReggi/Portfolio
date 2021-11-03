@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const NavbarContainer = styled.div`
     width: 100%;
     height: 60px;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 50;
     background-color: #49426c;
@@ -55,7 +55,6 @@ export const Menu = styled.ul`
 
 export const MenuItems = styled.li`
     height: 100%;
-    padding: 0.5rem 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;

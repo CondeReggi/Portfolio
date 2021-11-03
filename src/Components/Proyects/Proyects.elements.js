@@ -5,7 +5,8 @@ export const ProyectContainer = styled.div`
     background-color: #48186c;
     padding: 20px 100px 0 100px;
     color: #ebc88b;  
-    min-height: 100vh; 
+    min-height: 100vh;
+    margin-top: 30px; 
 
     @media screen and (max-width: 650px){
         padding: 0;

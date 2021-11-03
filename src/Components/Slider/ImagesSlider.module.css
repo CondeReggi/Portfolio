@@ -24,14 +24,6 @@
     border-radius: 10px;
 }
 
-.divcontainerImage:hover > img{
-    width: auto;
-    transform: translateX(-30%);
-    transition: 2.2s ease;
-}
-
-
-
 .left_arrow{
     position: absolute;
     top: 40%;
@@ -103,5 +95,13 @@
 @media (max-width: 321px) {
     .divDescription{
         padding: 10px;
+    }
+}
+
+@media (min-width: 900px) {
+    .divcontainerImage:hover > img{
+        width: auto;
+        transform: translateX(-30%);
+        transition: 2.2s ease;
     }
 }
