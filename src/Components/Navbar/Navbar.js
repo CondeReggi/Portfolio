@@ -15,7 +15,7 @@ import About from "../About/About";
 import Home from "../Home/Home";
 import Proyects from "../Proyects/Proyects";
 import Contact from "../Contact/Contact";
-
+ 
 const Navbar = () => {
   const [click, setclick] = useState(false);
   return (
@@ -75,21 +75,20 @@ const Navbar = () => {
             </Menu>
           </NavbarWrapper>
         </NavbarContainer>
-
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/proyects">
-            <Proyects />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+          <Switch>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/proyects">
+              <Proyects />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
       </Router>
     </>
   );

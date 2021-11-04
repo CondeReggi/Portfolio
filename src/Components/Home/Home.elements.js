@@ -10,6 +10,7 @@ export const HomeComponent = styled.div`
     background-color: #48186c;
     color: #fff;
     overflow: hidden;
+    min-height: 100vh;
 
     @media screen and (max-width: 740px){
         flex-direction: column;
