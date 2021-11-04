@@ -6,6 +6,8 @@ import cmas from './images/tecnologies/cmas.png';
 import sql from './images/tecnologies/sql.png';
 import reactjs from './images/tecnologies/reactjs.png';
 import bootstrap from './images/tecnologies/bootstrap.png';
+import git from './images/tecnologies/git.png';
+
 import calculadora from '../src/Components/Slider/images/calculadora.JPG';
 import breakingbad from '../src/Components/Slider/images/brakingbadAPI.png';
 import moviesapp from './Components/Slider/images/moviesappJSvanilla.JPG';
@@ -13,6 +15,7 @@ import clonprex from './Components/Slider/images/clonprex.JPG';
 import harrypotter from './Components/Slider/images/harrypotterAPI.JPG';
 import hash from './Components/Slider/images/hashingmapping.JPG';
 import kinetik from './Components/Slider/images/kinetik.JPG';
+
 
 export const TechnologiesData = [
     {
@@ -54,6 +57,11 @@ export const TechnologiesData = [
         img: cmas,
         name: "C++",
         pagina: "https://docs.microsoft.com/en-us/cpp/?view=msvc-160"
+    },
+    {
+        img: git,
+        name: "git",
+        pagina: "https://git-scm.com/"
     }
 ]
 
