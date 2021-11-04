@@ -34,9 +34,11 @@ export const DescriptionAboutMe = styled.div`
 
 export const PresentationAboutMe = styled.div`
     width: 50%;
+    padding-left: 12px;
 
     @media screen and (max-width: 1000px){
         margin-top 50px;
+        padding-left: 0px;
     }
 `;
 
