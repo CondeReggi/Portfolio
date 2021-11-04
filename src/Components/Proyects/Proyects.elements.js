@@ -1,12 +1,16 @@
 import styled from 'styled-components'
+import { useSelector } from "react-redux";
+
+//${ () => useSelector((store) => store.darkmodeReducer.value) ? '#48156c' : 'rgb(44 42 42)'} //0 8px 32px 0 rgb(79 81 100 / 37%)
 
 export const ProyectContainer = styled.div`
+    transition: all 1s ease;
     width: 100%;
-    background-color: #48186c;
+    background-color: ${ () => useSelector((store) => store.darkmodeReducer.value) ? '#48156c' : 'rgb(44 42 42)'};
     padding: 20px 100px 0 100px;
-    color: #ebc88b;  
+    color: ${ () => useSelector((store) => store.darkmodeReducer.value) ? '#ebc88b' : '#fff'};  
     min-height: 100vh;
-    margin-top: 30px; 
+    margin-top: 60px; 
 
     @media screen and (max-width: 650px){
         padding: 0;

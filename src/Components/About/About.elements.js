@@ -1,10 +1,14 @@
 import styled from "styled-components";
+import { useSelector } from "react-redux";
+//${ () => useSelector((store) => store.darkmodeReducer.value) ? '#48156c' : 'rgb(44 42 42)'
 
 export const AboutComponent = styled.div`
+    transition: all 1s ease;    
+    margin-top: 25px;
     width: 100%;
     min-height: 100vh;
-    background-color: #48186c;
-    color: #ebc88b;
+    background-color: ${ () => useSelector((store) => store.darkmodeReducer.value) ? '#48156c' : 'rgb(44 42 42)' };
+    color: ${ () => useSelector((store) => store.darkmodeReducer.value) ? '#ebc88b' : 'white' } ;
 `;
 
 export const TitleAbout = styled.div`
@@ -20,7 +24,6 @@ export const TitleAbout = styled.div`
 export const DescriptionAboutMe = styled.div`
     width: 100%;
     padding 5px 100px;
-    background-color: #48156c;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;

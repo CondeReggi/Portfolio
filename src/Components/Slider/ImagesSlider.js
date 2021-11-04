@@ -1,28 +1,22 @@
 import React, { useState } from 'react'
 import { FaChevronRight , FaChevronLeft } from "react-icons/fa";
 import { myProyects } from '../../Data';
+import { SliderContent } from './imagesSlider.elements';
 import styles from './ImagesSlider.module.css'
 
 const ImagesSlider = ({ data }) => {
-
-    //console.log(data)
-
     const [current, setCurrent] = useState(0);
     const lenght = data;
-
-    //console.log(lenght)
 
     const nextSlide = () => setCurrent((current ===  lenght - 1) ? 0 : current + 1)
     const prevSlide = () => setCurrent(current === 0 ? lenght - 1 : current - 1)
 
     if( !Array.isArray(myProyects) || myProyects.lenght <= 0 ) return null;
 
-    //console.log(current)
-
     return (
-        <section className={styles.slider}>
-            <FaChevronLeft onClick={prevSlide} className={styles.left_arrow}/>
-            <FaChevronRight onClick={nextSlide} className={styles.right_arrow}/>
+        <SliderContent>
+            <FaChevronLeft onClick={prevSlide} style={{ color: 'inherit'}} className={styles.left_arrow}/>
+            <FaChevronRight onClick={nextSlide} style={{ color: 'inherit'}} className={styles.right_arrow}/>
             {
                 myProyects.map( (slide, index) => {
                     return (
@@ -39,7 +33,7 @@ const ImagesSlider = ({ data }) => {
                     )
                 })
             }
-        </section>
+        </SliderContent>
     )
 }
 

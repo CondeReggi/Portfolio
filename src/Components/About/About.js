@@ -7,7 +7,6 @@ import { TechnologiesData } from '../../Data'
 
 const About = () => {
     const imagenes = TechnologiesData
-
     const OpenPage = (page) => window.open(page)
 
     return (

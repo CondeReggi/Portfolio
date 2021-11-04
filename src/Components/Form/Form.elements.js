@@ -1,23 +1,45 @@
 import styled from 'styled-components';
+import { useSelector } from "react-redux";
+
+//${ () => useSelector((store) => store.darkmodeReducer.value) ? '#48156c' : 'rgb(44 42 42)'} /
+
+export const ButtonSubmit = styled.input`
+    width: 100px; 
+    padding: 10px 15px;
+    border-radius: 30px;
+    border:none;
+    cursor: pointer;
+    background-color: ${ () => useSelector((store) => store.darkmodeReducer.value) ? 'rgb(89, 127, 197)' : '#48156c'} ;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    &:hover{
+        background-color: rgb(71, 114, 194);
+    }
+`;
 
 export const ContainerForm = styled.div`
+    transition: all 1s ease;
     margin-top: 60px;
     min-height: 100vh;
-    background-color: #48186c;
+    background-color: ${ () => useSelector((store) => store.darkmodeReducer.value) ? '#48156c' : 'rgb(44 42 42)'};
     width: 100%;
     display: flex;
     justify-content: center;
-    color: #ebc88b;
+    color: ${ () => useSelector((store) => store.darkmodeReducer.value) ? '#ebc88b' : '#fff'} ;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    padding-top: 20px;
 `;
 
 export const DescriptionForm = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #49426c8d;;
+    background-color: ${ () => useSelector((store) => store.darkmodeReducer.value) ? '#49426c8d' : '#281e1e8d'};
     height: 300px;
     margin-top: 50px;
     border-radius: 8px;

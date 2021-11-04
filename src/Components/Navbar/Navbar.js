@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {
   IconLogo,
   IconLogoMobile,
+  LinkStyled,
   Menu,
   MenuItems,
   NavbarContainer,
@@ -9,8 +10,7 @@ import {
 } from "./Navbar.elements";
 import { IoCodeSlash } from "react-icons/io5";
 import { FaBars, FaRadiation } from "react-icons/fa";
-import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
-import styles from "./Navbar.module.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from "../About/About";
 import Home from "../Home/Home";
 import Proyects from "../Proyects/Proyects";
@@ -29,48 +29,44 @@ const Navbar = () => {
 
             <IconLogoMobile>
               {click ? (
-                <FaRadiation onClick={() => setclick(!click)} color="#ebc88b" />
+                <FaRadiation onClick={() => setclick(!click)} color="inherit" />
               ) : (
-                <FaBars onClick={() => setclick(!click)} color="#ebc88b" />
+                <FaBars onClick={() => setclick(!click)} color="inherit" />
               )}
             </IconLogoMobile>
 
             <Menu click={click}>
               <MenuItems>
-                <Link
+                <LinkStyled
                   onClick={() => setclick(!click)}
-                  className={styles.MenuItemsLink}
                   to="/"
                 >
                   Home
-                </Link>
+                </LinkStyled>
               </MenuItems>
               <MenuItems>
-                <Link
+                <LinkStyled
                   onClick={() => setclick(!click)}
-                  className={styles.MenuItemsLink}
                   to="/about"
                 >
                   About
-                </Link>
+                </LinkStyled>
               </MenuItems>
               <MenuItems>
-                <Link
+                <LinkStyled
                   onClick={() => setclick(!click)}
-                  className={styles.MenuItemsLink}
                   to="/proyects"
                 >
                   Proyects
-                </Link>
+                </LinkStyled>
               </MenuItems>
               <MenuItems>
-                <Link
+                <LinkStyled
                   onClick={() => setclick(!click)}
-                  className={styles.MenuItemsLink}
                   to="/contact"
                 >
                   Contact
-                </Link>
+                </LinkStyled>
               </MenuItems>
             </Menu>
           </NavbarWrapper>

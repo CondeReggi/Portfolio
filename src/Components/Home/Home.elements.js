@@ -1,13 +1,17 @@
 import styled from "styled-components";
+import { useSelector } from "react-redux";
+
+//${ () => useSelector((store) => store.darkmodeReducer.value) ? '#48156c' : 'rgb(44 42 42)'} //0 8px 32px 0 rgb(79 81 100 / 37%)
 
 export const HomeComponent = styled.div`
+    transition: all 1s ease;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     text-align: end;
-    background-color: #48186c;
+    background-color: ${ () => useSelector((store) => store.darkmodeReducer.value) ? '#48156c' : 'rgb(44 42 42)'} ;
     color: #fff;
     overflow: hidden;
     min-height: 100vh;
@@ -15,6 +19,7 @@ export const HomeComponent = styled.div`
     @media screen and (max-width: 740px){
         flex-direction: column;
         height: auto;
+        margin-top: 30px;
     }
 `;
 

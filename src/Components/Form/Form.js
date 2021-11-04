@@ -1,6 +1,7 @@
 import React from "react";
 import emailjs from "emailjs-com";
 import {
+  ButtonSubmit,
   ContactMeAnimation,
   ContainerForm,
   Cube,
@@ -137,7 +138,7 @@ const Form = () => {
               placeholder="Message"
               required
             />
-            <input className="inputbutton" type="submit" value="Send" />
+            <ButtonSubmit className="inputbutton" type="submit" value="Send" />
           </form>
         </DescriptionForm>
       </ContainerForm>

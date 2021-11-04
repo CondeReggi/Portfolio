@@ -29,7 +29,6 @@
     top: 40%;
     left: 32px;
     font-size: 3rem;
-    color: #ebc88b;
     z-index: 2;
     cursor: pointer;
     user-select: none;
@@ -41,7 +40,6 @@
     right: 32px;
     font-size: 3rem;
     z-index: 2;
-    color: #ebc88b;
     cursor: pointer;
     user-select: none;
 }
